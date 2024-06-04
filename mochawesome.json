@@ -1,0 +1,283 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 5,
+    "passes": 4,
+    "pending": 0,
+    "failures": 1,
+    "testsRegistered": 5,
+    "passPercent": 80,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "start": "2024-05-17T08:28:44.406Z",
+    "end": "2024-05-17T08:29:20.943Z",
+    "duration": 36537
+  },
+  "results": [
+    {
+      "uuid": "98b159ff-3659-4a3b-8ae4-ac4abf10802d",
+      "title": "",
+      "fullFile": "cypress\\tests\\components\\FooterTest.js",
+      "file": "cypress\\tests\\components\\FooterTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f1d1cf19-17e0-4725-b7bf-3345a97d9fc2",
+          "title": "Footer Component Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test for contact us column",
+              "fullTitle": "Footer Component Test Test for contact us column",
+              "timedOut": null,
+              "duration": 4262,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// footerComp.getContactUsData().then(actualContactUsData => cy.log(JSON.stringify(actualContactUsData)))\nconst expectedContactUsData = {\n  header: 'Get in Touch',\n  address: '2390 El Camino Real',\n  phone: '+440 123456',\n  email: 'demo@blazemeter.com'\n};\nfooterComp.getContactUsData().then(actualContactUsData => {\n  cy.log(actualContactUsData);\n  cy.wrap('').then(() => {\n    expect(actualContactUsData.header).to.equal(expectedContactUsData.header);\n    expect(actualContactUsData.address).to.equal(expectedContactUsData.address);\n    expect(actualContactUsData.phone).to.equal(expectedContactUsData.phone);\n    expect(actualContactUsData.email).to.equal(expectedContactUsData.email);\n    expect(actualContactUsData).to.deep.equal(expectedContactUsData);\n  });\n});",
+              "err": {},
+              "uuid": "8e26b6fc-20f5-4be0-ae5a-0eb8345d10cf",
+              "parentUUID": "f1d1cf19-17e0-4725-b7bf-3345a97d9fc2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8e26b6fc-20f5-4be0-ae5a-0eb8345d10cf"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4262,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "ddfc37de-ec1c-4512-bd55-a35454f7a0ec",
+      "title": "",
+      "fullFile": "cypress\\tests\\components\\HeaderTest.js",
+      "file": "cypress\\tests\\components\\HeaderTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e5be86e7-5475-4c46-ade5-29b099639010",
+          "title": "Component Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test for brand logo",
+              "fullTitle": "Component Test Test for brand logo",
+              "timedOut": null,
+              "duration": 1922,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "headerComp.brandLogoImg().should('be.visible');\nheaderComp.brandLogo().should('contain.text', BRAND_TEXT);",
+              "err": {},
+              "uuid": "2283b72e-5ba2-4aca-ac02-8f48c33e1846",
+              "parentUUID": "e5be86e7-5475-4c46-ade5-29b099639010",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test for header menu",
+              "fullTitle": "Component Test Test for header menu",
+              "timedOut": null,
+              "duration": 547,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const expectedMenuDetailsData = [{\n  \"text\": \"Home (current)\",\n  \"href\": \"index.html\"\n}, {\n  \"text\": \"Contact\",\n  \"href\": \"#\"\n}, {\n  \"text\": \"About us\",\n  \"href\": \"#\"\n}, {\n  \"text\": \"Cart\",\n  \"href\": \"cart.html\"\n}, {\n  \"text\": \"Log in\",\n  \"href\": \"#\"\n}, {\n  \"text\": \"Sign up\",\n  \"href\": \"#\"\n}];\nheaderComp.getMenuDetails().then(menuDetailsData => {\n  cy.log(JSON.stringify(menuDetailsData));\n  expect(menuDetailsData).to.deep.equal(expectedMenuDetailsData);\n});",
+              "err": {},
+              "uuid": "1d047aac-0076-400d-a3ff-ccb6ad801d52",
+              "parentUUID": "e5be86e7-5475-4c46-ade5-29b099639010",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2283b72e-5ba2-4aca-ac02-8f48c33e1846",
+            "1d047aac-0076-400d-a3ff-ccb6ad801d52"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2469,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "82239635-9fc7-457c-96bf-91e10f811f08",
+      "title": "",
+      "fullFile": "cypress\\tests\\components\\ProductDetailsTest.js",
+      "file": "cypress\\tests\\components\\ProductDetailsTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8bf9317b-dd74-4ff6-a31a-2780795d7198",
+          "title": "Product Detail test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should be able to verify product detail",
+              "fullTitle": "Product Detail test should be able to verify product detail",
+              "timedOut": null,
+              "duration": 4870,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_HomepageAPI.HomepageAPI.getHomePageProduct().then(apiData => {\n  // const productList = apiData.response.body.Items\n  let index = Math.floor(Math.random() * apiData.length);\n  const randomProduct = apiData[index];\n  const randomProductName = randomProduct.title.trim().replace(\"\\n\", \"\"); //chưa làm được\n  cy.contains(randomProductName).click();\n  const productDetails = new _ProductDetailsComponent.default();\n  productDetails.getProductImg().should('be.visible');\n  productDetails.getProductName().should('have.text', randomProductName);\n  productDetails.getProductPrice().should('contain.text', randomProduct.price);\n  productDetails.getProductDesc().should('not.be.empty');\n});",
+              "err": {},
+              "uuid": "42ed9252-a037-460f-963c-0f66d143f344",
+              "parentUUID": "8bf9317b-dd74-4ff6-a31a-2780795d7198",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "42ed9252-a037-460f-963c-0f66d143f344"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4870,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "f986839b-f360-4ea1-918f-de6b5dee6af8",
+      "title": "",
+      "fullFile": "cypress\\tests\\components\\FooterrTest.js",
+      "file": "cypress\\tests\\components\\FooterrTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "An uncaught error was detected outside of a test",
+          "fullTitle": "An uncaught error was detected outside of a test",
+          "timedOut": null,
+          "duration": 365,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "throw err;",
+          "err": {
+            "message": "TypeError: The following error originated from your test code, not from Cypress.\n\n  > _FooterComponent.default is not a constructor\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.",
+            "estack": "TypeError: The following error originated from your test code, not from Cypress.\n\n  > _FooterComponent.default is not a constructor\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.\n    at Suite.eval (webpack://cypress-installation/./cypress/tests/components/FooterrTest.js:5:21)\n    at eval (webpack://cypress-installation/./cypress/tests/components/FooterrTest.js:2:0)\n    at eval (https://www.demoblaze.com/__cypress/tests?p=cypress\\tests\\components\\FooterrTest.js:214:3)\n    at eval (https://www.demoblaze.com/__cypress/tests?p=cypress\\tests\\components\\FooterrTest.js:216:12)\n    at eval (<anonymous>)",
+            "diff": null
+          },
+          "uuid": "2f0e0d5e-535e-487f-80ea-85c1f75984e4",
+          "parentUUID": "f986839b-f360-4ea1-918f-de6b5dee6af8",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [],
+      "failures": [
+        "2f0e0d5e-535e-487f-80ea-85c1f75984e4"
+      ],
+      "pending": [],
+      "skipped": [],
+      "duration": 365,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
